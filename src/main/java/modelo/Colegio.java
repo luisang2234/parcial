@@ -38,6 +38,13 @@ public class Colegio {
         }
         return  sb.toString();
     }
-    
+    public String listarProfesoresOrdenados(){
+        ArrayList<Profesor> profesores = new ArrayList<>();
+        for (Persona p : Personas) {
+            if(p instanceof Profesor){
+                profesores.add((Profesor)p);
+            }
+        }
+    }
     
 }
