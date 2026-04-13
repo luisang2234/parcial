@@ -60,6 +60,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 txtResultado.setText(controlador.obtenerListadoEstudiantes());
             }
         });
+          btnListarProfesores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtResultado.setText(controlador.obtenerListadoProfesores());
+            }
+        });
           
           
 
