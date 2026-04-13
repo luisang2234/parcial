@@ -12,5 +12,13 @@ import java.util.Comparator;
  * @author LENOVO
  */
 public class Colegio {
+    private ArrayList<Persona> Personas;
+    
+    public Colegio() {
+        Personas = new ArrayList<>();
+      
+    }
+    
+    
     
 }
