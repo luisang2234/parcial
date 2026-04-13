@@ -31,3 +31,11 @@ public class Estudiante extends Persona {
     public double getPromedio() {
         return promedio;
     }
+ @Override
+public String mostrarDatos() {
+    return super.mostrarDatos() +
+            ", Codigo: " + codigo +
+            ", Grado:" + grado +
+            ", Promedio" + promedio;
+}
+}
