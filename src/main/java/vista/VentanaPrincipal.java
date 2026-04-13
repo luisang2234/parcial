@@ -20,6 +20,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
       public void setControlador(ControladorColegio controlador) {
         this.controlador = controlador;
     }
+        @SuppressWarnings("unchecked")
+    private void initComponents(){
 
     
     
