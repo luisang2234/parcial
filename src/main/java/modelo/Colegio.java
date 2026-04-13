@@ -18,8 +18,25 @@ public class Colegio {
         Personas = new ArrayList<>();
       
     }
+     public ArrayList<Persona> getPersonas() {
+        return Personas;
+    }
+
+    public void setPersonas(ArrayList<Persona> personas) {
+        this.Personas = personas;
+    }
     public void agregarPersona(Persona p){
         Personas.add(p);
+    }
+    public String listarEstudiantes(){
+        StringBuilder sb= new
+            StringBuilder();
+        for (Persona p : Personas){
+            if (p instanceof Estudiante) {
+                sb.append(p.mostrarDatos()).append("\n");
+            }
+        }
+        return  sb.toString();
     }
     
     
