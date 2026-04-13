@@ -45,6 +45,20 @@ public class Colegio {
                 profesores.add((Profesor)p);
             }
         }
+        Collections.sort(profesores, new Comparator<Profesor>() {
+            @Override
+            public int compare(Profesor p1, Profesor p2) {
+                return Double.compare(p2.calcularSalarioTotal(), p1.calcularSalarioTotal());
+            }
+        });
+        StringBuilder sb = new
+            StringBuilder();
+        for (Profesor prof : profesores) {
+              sb.append(prof.mostrarDatos()).append("\n");
+            
+        }
+        return sb.toString();
+
     }
     
 }
