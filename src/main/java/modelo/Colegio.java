@@ -18,7 +18,9 @@ public class Colegio {
         Personas = new ArrayList<>();
       
     }
-    
+    public void agregarPersona(Persona p){
+        Personas.add(p);
+    }
     
     
 }
