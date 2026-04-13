@@ -53,7 +53,21 @@ public class Profesor extends Persona{
         public double calcularPrestaciones() {
             return calcularPagoMensual() * 0.19;
         }
+        public  double calcularSalarioTotal() {
+            return calcularPagoMensual() + calcularPrestaciones();
+        }
         
+         @Override
+    public String mostrarDatos() {
+        return super.mostrarDatos() +
+               ", Cédula: " + cedula +
+               ", Área: " + area +
+               ", Valor Hora: " + valorHora +
+               ", Horas Mes: " + horasMes +
+               ", Pago Mensual: " + calcularPagoMensual() +
+               ", Prestaciones: " + calcularPrestaciones() +
+               ", Salario Total: " + calcularSalarioTotal();
+    }
         
         
 }
