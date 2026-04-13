@@ -30,10 +30,10 @@ public class Profesor extends Persona{
         this.area = area;
         
     }
-    public double getValorHora(double valorHora){
-        this.valorHora = valorHora;
+     public double getValorHora() {
+        return valorHora;
     }
-        public void setValorHora(double valorHora) {
+    public void setValorHora(double valorHora) {
             this.valorHora = valorHora;
         }    
         public int getHoraMes(){
@@ -47,8 +47,10 @@ public class Profesor extends Persona{
             return base + (base * 0.30);
         }
         public double CalcularPagoMensual (int horas, double valorHoras){
-            double base = horas * valorHoras;
+            double base = horas * valorHora;
+            return base + (base * 0.30);
         }
+        
         
         
 }
