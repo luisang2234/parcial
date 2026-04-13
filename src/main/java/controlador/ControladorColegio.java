@@ -6,11 +6,38 @@ package controlador;
 import modelo.Colegio;
 import modelo.Estudiante;
 import modelo.Profesor;
+import vista.VentanaPrincipal;
+
 
 /**
  *
  * @author LENOVO
  */
 public class ControladorColegio {
-    
-}
+    private Colegio colegio;
+    private VentanaPrincipal vista;
+
+    public ControladorColegio(Colegio colegio, VentanaPrincipal vista) {
+        this.colegio = colegio;
+        this.vista = vista;
+    }
+     public void agregarEstudiante(
+            String nombre,
+            String direccion,
+            String telefono,
+            String fechaNacimiento,
+            String codigo,
+            String grado,
+            double promedio) {
+
+        Estudiante e = new Estudiante();
+        e.setNombre(nombre);
+        e.setDireccion(direccion);
+        e.setTelefono(telefono);
+        e.setFechaNacimiento(fechaNacimiento);
+        e.setCodigo(codigo);
+        e.setGrado(grado);
+        e.setPromedio(promedio);
+
+        colegio.agregarPersona(e);
+    }
