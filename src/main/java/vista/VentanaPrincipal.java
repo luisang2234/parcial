@@ -14,4 +14,9 @@ import javax.swing.JOptionPane;
 public class VentanaPrincipal extends javax.swing.JFrame {
     private ControladorColegio controlador;
     
+    public VentanaPrincipal(){
+        initComponents();
+    }
+    
+    
 }
