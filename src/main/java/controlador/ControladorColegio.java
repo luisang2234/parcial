@@ -41,3 +41,25 @@ public class ControladorColegio {
 
         colegio.agregarPersona(e);
     }
+      public void agregarProfesor(
+            String nombre,
+            String direccion,
+            String telefono,
+            String fechaNacimiento,
+            String cedula,
+            String area,
+            double valorHora,
+            int horasMes) {
+
+        Profesor p = new Profesor();
+        p.setNombre(nombre);
+        p.setDireccion(direccion);
+        p.setTelefono(telefono);
+        p.setFechaNacimiento(fechaNacimiento);
+        p.setCedula(cedula);
+        p.setArea(area);
+        p.setValorHora(valorHora);
+        p.setHorasMes(horasMes);
+
+        colegio.agregarPersona(p);
+    }
