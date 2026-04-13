@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
  *
  * @author LENOVO
  */
-public class VentanaPrincipal {
+public class VentanaPrincipal extends javax.swing.JFrame {
+    private ControladorColegio controlador;
     
 }
