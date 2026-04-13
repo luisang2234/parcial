@@ -38,6 +38,20 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         txtValorHora = new javax.swing.JTextField();
         txtHorasMes = new javax.swing.JTextField();
         txtResultado = new javax.swing.JTextArea();
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTittle("Sistema del colegio");
+             btnAgregarEstudiante.setText("Agregar Estudiante");
+        btnAgregarProfesor.setText("Agregar Profesor");
+        btnListarEstudiantes.setText("Listar Estudiantes");
+        btnListarProfesores.setText("Listar Profesores");
+
+        btnAgregarEstudiante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agregarEstudiante();
+            }
+        });
+
+      
     }
 
     
