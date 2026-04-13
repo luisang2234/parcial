@@ -60,5 +60,14 @@ public class Colegio {
         return sb.toString();
 
     }
+    public double totalPrestaciones(){
+        double total = 0;
+        for (Persona  p : Personas){
+            if(p instanceof Profesor) {
+                total += ((Profesor)p).calcularPrestaciones();
+            }
+        }
+        return total;
+    }
     
 }
