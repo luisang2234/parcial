@@ -50,6 +50,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 agregarEstudiante();
             }
         });
+         btnAgregarProfesor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agregarProfesor();
+            }
+        });
+
 
       
     }
