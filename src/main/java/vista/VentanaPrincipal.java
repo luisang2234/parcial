@@ -22,6 +22,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
         @SuppressWarnings("unchecked")
     private void initComponents(){
+         btnAgregarEstudiante = new javax.swing.JButton();
+        btnAgregarProfesor = new javax.swing.JButton();
+        btnListarEstudiantes = new javax.swing.JButton();
+        btnListarProfesores = new javax.swing.JButton();
+    }
 
     
     
