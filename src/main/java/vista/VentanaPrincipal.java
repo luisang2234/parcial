@@ -17,6 +17,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public VentanaPrincipal(){
         initComponents();
     }
+      public void setControlador(ControladorColegio controlador) {
+        this.controlador = controlador;
+    }
+
     
     
 }
