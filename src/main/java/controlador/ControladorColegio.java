@@ -63,3 +63,13 @@ public class ControladorColegio {
 
         colegio.agregarPersona(p);
     }
+      
+    public String obtenerListadoEstudiantes() {
+        return colegio.listarEstudiantes();
+    }
+
+    public String obtenerListadoProfesores() {
+        return colegio.listarProfesoresOrdenados() +
+               "\nTOTAL PRESTACIONES: " + colegio.totalPrestaciones();
+    }
+}
