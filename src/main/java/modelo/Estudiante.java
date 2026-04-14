@@ -31,6 +31,9 @@ public class Estudiante extends Persona {
     public double getPromedio() {
         return promedio;
     }
+    public void setPromedio(double promedio){
+        this.promedio = promedio;
+    }
  @Override
 public String mostrarDatos() {
     return super.mostrarDatos() +
