@@ -212,7 +212,7 @@ public class VentanaPrincipal extends JFrame {
             JOptionPane.showMessageDialog(this, "Estudiante agregado correctamente");
             limpiarCampos();
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error al agregar estudiante: " + e.getMessage());
+            JOptionPane.showMessageDialog(this, "Error al agregar estudiante: " );
         }
     }
 
@@ -232,7 +232,7 @@ public class VentanaPrincipal extends JFrame {
             JOptionPane.showMessageDialog(this, "Profesor agregado correctamente");
             limpiarCampos();
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error al agregar profesor: " + e.getMessage());
+            JOptionPane.showMessageDialog(this, "Error al agregar profesor: " );
         }
     }
 
