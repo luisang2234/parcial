@@ -14,3 +14,6 @@ public class Main {
         VentanaPrincipal vista = new VentanaPrincipal();
  ControladorColegio controlador = new ControladorColegio(modelo, vista);
  vista.setControlador(controlador);
+ vista.setVisible(true);
+    }
+}
