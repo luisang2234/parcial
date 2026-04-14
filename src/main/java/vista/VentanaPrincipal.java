@@ -203,6 +203,20 @@ public class VentanaPrincipal extends JFrame {
     String nombre = txtNombre.getText();
     String promedioTxt = txtPromedio.getText();
     String telefono = txtTelefono.getText();
+    String codigoTxt = txtCodigo.getText();
+int codigo;
+
+try {
+    codigo = Integer.parseInt(codigoTxt);
+} catch (NumberFormatException e) {
+    JOptionPane.showMessageDialog(this, "Código inválido");
+    return;
+}
+
+if (codigo <= 2100000) {
+    JOptionPane.showMessageDialog(this, "El código debe ser mayor a 2100000");
+    return;
+}
 
 if (!telefono.matches("\\d{10,}")) {
     JOptionPane.showMessageDialog(this, "El teléfono debe tener mínimo 10 números");
