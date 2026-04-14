@@ -244,24 +244,53 @@ if (!telefono.matches("\\d{10,}")) {
 }
 
     private void agregarProfesor() {
-        try {
-            controlador.agregarProfesor(
-                    txtNombre.getText(),
-                    txtDireccion.getText(),
-                    txtTelefono.getText(),
-                    txtFechaNacimiento.getText(),
-                    txtCedula.getText(),
-                    txtArea.getText(),
-                    Double.parseDouble(txtValorHora.getText()),
-                    Integer.parseInt(txtHorasMes.getText())
-            );
 
-            JOptionPane.showMessageDialog(this, "Profesor agregado correctamente");
-            limpiarCampos();
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error al agregar profesor: " );
-        }
+    String nombre = txtNombre.getText();
+    String valorHoraTxt = txtValorHora.getText();
+    String horasMesTxt = txtHorasMes.getText();
+    String cedula = txtCedula.getText();
+
+if (!cedula.matches("\\d{8,}")) {
+    JOptionPane.showMessageDialog(this, "La cédula debe tener mínimo 8 números");
+    return;
+}
+
+    if (!nombre.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+")) {
+        JOptionPane.showMessageDialog(this, "Nombre solo letras");
+        return;
     }
+
+    double valorHora;
+    int horasMes;
+
+    try {
+        valorHora = Double.parseDouble(valorHoraTxt);
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Colocar bien valor hora");
+        return;
+    }
+
+    try {
+        horasMes = Integer.parseInt(horasMesTxt);
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Colocar bien horas mes");
+        return;
+    }
+
+    controlador.agregarProfesor(
+            nombre,
+            txtDireccion.getText(),
+            txtTelefono.getText(),
+            txtFechaNacimiento.getText(),
+            txtCedula.getText(),
+            txtArea.getText(),
+            valorHora,
+            horasMes
+    );
+
+    JOptionPane.showMessageDialog(this, "Profesor agregado correctamente");
+    limpiarCampos();
+}
 
     private void limpiarCampos() {
         txtNombre.setText("");
