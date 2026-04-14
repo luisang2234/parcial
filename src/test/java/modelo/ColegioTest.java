@@ -38,4 +38,18 @@ public class ColegioTest {
 
         assertTrue(colegio.totalPrestaciones() > 0);
     }
+    @Test
+public void testAgregarEstudiante() {
+    Colegio colegio = new Colegio();
+
+    Estudiante e = new Estudiante();
+    e.setNombre("Ana");
+    e.setPromedio(4.5);
+
+    colegio.agregarPersona(e);
+
+    String resultado = colegio.listarEstudiantes();
+
+    assertTrue(resultado.contains("Ana"));
+}
 }
