@@ -100,6 +100,19 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Error al agregar profesor: " + e.getMessage());
         }
     }
+             private void limpiarCampos() {
+        txtNombre.setText("");
+        txtDireccion.setText("");
+        txtTelefono.setText("");
+        txtFechaNacimiento.setText("");
+        txtCodigo.setText("");
+        txtGrado.setText("");
+        txtPromedio.setText("");
+        txtCedula.setText("");
+        txtArea.setText("");
+        txtValorHora.setText("");
+        txtHorasMes.setText("");
+    }
           
           
 
