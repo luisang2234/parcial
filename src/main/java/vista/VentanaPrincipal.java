@@ -198,23 +198,43 @@ public class VentanaPrincipal extends JFrame {
     }
 
     private void agregarEstudiante() {
-        try {
-            controlador.agregarEstudiante(
-                    txtNombre.getText(),
-                    txtDireccion.getText(),
-                    txtTelefono.getText(),
-                    txtFechaNacimiento.getText(),
-                    txtCodigo.getText(),
-                    txtGrado.getText(),
-                    Double.parseDouble(txtPromedio.getText())
-            );
+       
 
-            JOptionPane.showMessageDialog(this, "Estudiante agregado correctamente");
-            limpiarCampos();
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error al agregar estudiante: " );
-        }
+    String nombre = txtNombre.getText();
+    String promedioTxt = txtPromedio.getText();
+
+    if (!nombre.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+")) {
+        JOptionPane.showMessageDialog(this, "Nombre solo letras");
+        return;
     }
+
+    double promedio;
+
+    try {
+        promedio = Double.parseDouble(promedioTxt);
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Colocar bien promedio");
+        return;
+    }
+
+    if (promedio < 0 || promedio > 5) {
+        JOptionPane.showMessageDialog(this, "Colocar bien promedio");
+        return;
+    }
+
+    controlador.agregarEstudiante(
+            nombre,
+            txtDireccion.getText(),
+            txtTelefono.getText(),
+            txtFechaNacimiento.getText(),
+            txtCodigo.getText(),
+            txtGrado.getText(),
+            promedio
+    );
+
+    JOptionPane.showMessageDialog(this, "Estudiante agregado correctamente");
+    limpiarCampos();
+}
 
     private void agregarProfesor() {
         try {
