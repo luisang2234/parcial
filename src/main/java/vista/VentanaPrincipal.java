@@ -39,7 +39,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         txtHorasMes = new javax.swing.JTextField();
         txtResultado = new javax.swing.JTextArea();
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTittle("Sistema del colegio");
+        
              btnAgregarEstudiante.setText("Agregar Estudiante");
         btnAgregarProfesor.setText("Agregar Profesor");
         btnListarEstudiantes.setText("Listar Estudiantes");
@@ -65,6 +65,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 txtResultado.setText(controlador.obtenerListadoProfesores());
             }
         });
+    }
              private void agregarEstudiante() {
         try {
             controlador.agregarEstudiante(
@@ -113,14 +114,31 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         txtValorHora.setText("");
         txtHorasMes.setText("");
     }
+             private javax.swing.JButton btnAgregarEstudiante;
+    private javax.swing.JButton btnAgregarProfesor;
+    private javax.swing.JButton btnListarEstudiantes;
+    private javax.swing.JButton btnListarProfesores;
+    private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtDireccion;
+    private javax.swing.JTextField txtTelefono;
+    private javax.swing.JTextField txtFechaNacimiento;
+    private javax.swing.JTextField txtCodigo;
+    private javax.swing.JTextField txtGrado;
+    private javax.swing.JTextField txtPromedio;
+    private javax.swing.JTextField txtCedula;
+    private javax.swing.JTextField txtArea;
+    private javax.swing.JTextField txtValorHora;
+    private javax.swing.JTextField txtHorasMes;
+    private javax.swing.JTextArea txtResultado;
+}
           
           
 
 
 
       
-    }
+    
 
     
     
-}
+
