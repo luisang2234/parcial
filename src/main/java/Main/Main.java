@@ -13,3 +13,4 @@ public class Main {
         Colegio modelo = new Colegio();
         VentanaPrincipal vista = new VentanaPrincipal();
  ControladorColegio controlador = new ControladorColegio(modelo, vista);
+ vista.setControlador(controlador);
