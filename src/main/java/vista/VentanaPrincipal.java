@@ -82,6 +82,24 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Error al agregar estudiante: " + e.getMessage());
         }
     }
+             private void agregarProfesor() {
+        try {
+            controlador.agregarProfesor(
+                    txtNombre.getText(),
+                    txtDireccion.getText(),
+                    txtTelefono.getText(),
+                    txtFechaNacimiento.getText(),
+                    txtCedula.getText(),
+                    txtArea.getText(),
+                    Double.parseDouble(txtValorHora.getText()),
+                    Integer.parseInt(txtHorasMes.getText())
+            );
+            JOptionPane.showMessageDialog(this, "Profesor agregado correctamente");
+            limpiarCampos();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error al agregar profesor: " + e.getMessage());
+        }
+    }
           
           
 
