@@ -12,3 +12,4 @@ public class Main {
     public static void main(String[] args) {
         Colegio modelo = new Colegio();
         VentanaPrincipal vista = new VentanaPrincipal();
+ ControladorColegio controlador = new ControladorColegio(modelo, vista);
