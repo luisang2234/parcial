@@ -202,6 +202,12 @@ public class VentanaPrincipal extends JFrame {
 
     String nombre = txtNombre.getText();
     String promedioTxt = txtPromedio.getText();
+    String telefono = txtTelefono.getText();
+
+if (!telefono.matches("\\d{10,}")) {
+    JOptionPane.showMessageDialog(this, "El teléfono debe tener mínimo 10 números");
+    return;
+}
 
     if (!nombre.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+")) {
         JOptionPane.showMessageDialog(this, "Nombre solo letras");
@@ -230,6 +236,7 @@ public class VentanaPrincipal extends JFrame {
             txtCodigo.getText(),
             txtGrado.getText(),
             promedio
+            
     );
 
     JOptionPane.showMessageDialog(this, "Estudiante agregado correctamente");
